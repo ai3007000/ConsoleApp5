@@ -33,7 +33,6 @@ namespace ConsoleApp5.ConsoleApp
         {
             return this.Address;
         }
-        /* ... */
     }
 
     /// <summary>
@@ -54,7 +53,6 @@ namespace ConsoleApp5.ConsoleApp
         {
             return this.Address;
         }
-        /* ... */
     }
 
     /// <summary>
@@ -75,6 +73,5 @@ namespace ConsoleApp5.ConsoleApp
         {
             return this.Address;
         }
-        /* ... */
     }
 }

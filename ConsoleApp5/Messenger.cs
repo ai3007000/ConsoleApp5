@@ -9,8 +9,8 @@ namespace ConsoleApp5.ConsoleApp
     class Messenger
     {
         public Messenger(User recipient) 
-        { 
-            this.sender = new User("Интернет-магазин");
+        {
+            this.sender = new User("Интернет-магазин", new Company("Литрес", "486498465416"));
             this.recipient = recipient;
         }
         private User sender { get; set; }
@@ -18,10 +18,14 @@ namespace ConsoleApp5.ConsoleApp
         /// <summary>
         /// Отправить сообщение
         /// </summary>
-        public static void SendMessage<T>(Message message) where T : Message
+        public static void SendMessage<T>(T message) where T : Message
         // Messanger.SendMessage<EmailMessage>(new EmailMessage("jeiwque))
         {
             message.ShowMessage();
+        }
+        public void ShowSender()
+        {
+            Console.WriteLine(this.sender);
         }
     }
 }

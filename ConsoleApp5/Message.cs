@@ -11,6 +11,10 @@ namespace ConsoleApp5.ConsoleApp
     /// </summary>
     class Message
     {
+        public Message(string text)
+        {
+            this.TextMessage = text;
+        }
         public string TextMessage {  get; set; }
         public void ShowMessage()
         {
@@ -23,7 +27,7 @@ namespace ConsoleApp5.ConsoleApp
     /// </summary>
     class EmailMessage : Message
     {
-
+        public EmailMessage(string TextMessage) : base(TextMessage) { }
     }
 
     /// <summary>
@@ -31,6 +35,6 @@ namespace ConsoleApp5.ConsoleApp
     /// </summary>
     class SmsMessage : Message 
     {
-
+        public SmsMessage(string TextMessage) : base(TextMessage) { }
     }
 }

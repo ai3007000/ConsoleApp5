@@ -16,7 +16,19 @@ namespace ConsoleApp5.ConsoleApp
             this.Name = Name;
             this.Description = Description;
         }
-        public string Name; // Название
-        public string Description; // Описание
+        static Product()
+        {
+            QuantityOrder++;
+        }
+        public string Name { get; set; } // Название
+        public string Description { get; set; } // Описание
+        private static int QuantityOrder; // Количество заказов
+        /// <summary>
+        /// Показать количество заказов
+        /// </summary>
+        public static void ShowQuantityOrder()
+        {
+            Console.WriteLine(QuantityOrder);
+        }
     }
 }

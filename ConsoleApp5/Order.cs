@@ -44,7 +44,7 @@ namespace ConsoleApp5.ConsoleApp
             Console.WriteLine("Заказы:");
             for (int j = 0; j < this.Products.Length; j++)
             {
-                Console.WriteLine($"Заказ №{this.Number}\tНазвание: {this.Products[j].Name}\tОписание: {this.Products[j].Description}");
+                Console.WriteLine($"место на складе: {j}\tНазвание: {this.Products[j].Name}\tОписание: {this.Products[j].Description}");
                 if (this.PlaceOfDelivery == "Пункт выдачи")
                 {
                     PickPointDelivery.Order[j] = this.Products[j];
